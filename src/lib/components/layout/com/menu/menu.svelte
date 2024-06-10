@@ -44,7 +44,7 @@
   <Menubar.Menu>
     <Menubar.Trigger><WeatherStation></WeatherStation>错误</Menubar.Trigger>
     <Menubar.Content>
-      <Menubar.Item on:click={() => navigatorPage("/test")}
+      <Menubar.Item on:click={() => navigatorPage("/code_error")}
         >代码错误</Menubar.Item
       >
       <Menubar.Separator />

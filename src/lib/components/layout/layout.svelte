@@ -52,5 +52,6 @@
 <style lang="scss">
   main {
     min-height: calc(100vh - 48px);
+    background-color: var(--background);
   }
 </style>
