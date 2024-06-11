@@ -33,7 +33,11 @@
     "dependencies": {
         "bits-ui": "^0.21.10",
         "cmdk-sv": "^0.0.17",
+        "echarts": "^5.5.0",
         "mode-watcher": "^0.3.0",
         "svelte-radix": "^1.1.0"
+    },
+    "engines": {
+        "node": ">=20.14.0"
     }
 }

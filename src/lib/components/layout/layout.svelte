@@ -5,7 +5,6 @@
   import * as Avatar from "$lib/components/ui/avatar";
   import { ModeWatcher } from "mode-watcher";
   import SearchPage from "$lib/components/layout/com/search_page/search_page.svelte";
-  import ChangeTheme from "$lib/components/layout/com/change_theme/change_theme.svelte";
   import RouteList from "$lib/components/layout/com/route_list/route_list.svelte";
   import SystemSetting from "$lib/components/layout/com/system_setting/system_setting.svelte";
 
@@ -31,7 +30,6 @@
       </div>
       <div class="flex justify-between items-center px-3">
         <SearchPage></SearchPage>
-        <ChangeTheme></ChangeTheme>
         <SystemSetting></SystemSetting>
         <Notification class="mx-2 cursor-pointer" />
         <Avatar.Root class="mx-2">
@@ -52,5 +50,6 @@
 <style lang="scss">
   main {
     min-height: calc(100vh - 48px);
+    background-color: var(--background);
   }
 </style>

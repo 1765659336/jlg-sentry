@@ -9,6 +9,7 @@
     systemStore,
     type I_systemStoreState,
   } from "$lib/stores/system_store";
+  import ChangeTheme from "$lib/components/layout/com/change_theme/change_theme.svelte";
 
   let screenBlank: boolean;
 
@@ -39,13 +40,15 @@
       </Sheet.Header>
       <div class="grid gap-4 py-4">
         <h2>Stretch</h2>
-        <Toggle aria-label="toggle Stretch" on:click={stretchClick}>
+        <Button variant="outline" on:click={stretchClick}>
           {#if screenBlank}
             <PanHorizontal class="h-4 w-4" />
           {:else}
             <ContainerImagePushPull />
           {/if}
-        </Toggle>
+        </Button>
+        <h2>Theme</h2>
+        <ChangeTheme></ChangeTheme>
       </div>
       <Sheet.Footer>
         <Sheet.Close asChild let:builder>
