@@ -1,5 +1,6 @@
 <script lang="ts">
   import * as Tabs from "$lib/components/ui/tabs/index";
+  import ErrorListTab from "./com/error_list_tab/error_list_tab.svelte";
   import OverviewTab from "./com/overview_tab/overview_tab.svelte";
 </script>
 
@@ -12,6 +13,8 @@
   <Tabs.Content value="overview">
     <OverviewTab></OverviewTab>
   </Tabs.Content>
-  <Tabs.Content value="error_list">错误列表</Tabs.Content>
+  <Tabs.Content value="error_list">
+    <ErrorListTab></ErrorListTab>
+  </Tabs.Content>
   <Tabs.Content value="wait_solve_error">待处理错误</Tabs.Content>
 </Tabs.Root>
