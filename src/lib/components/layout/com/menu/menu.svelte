@@ -18,7 +18,7 @@
       ><LogoSvelte></LogoSvelte></Menubar.Trigger
     >
   </Menubar.Menu>
-  <Menubar.Menu>
+  <!-- <Menubar.Menu>
     <Menubar.Trigger
       ><IbmCloudBareMetalServer></IbmCloudBareMetalServer>概览</Menubar.Trigger
     >
@@ -40,7 +40,7 @@
         >地狱分析</Menubar.Item
       >
     </Menubar.Content>
-  </Menubar.Menu>
+  </Menubar.Menu> -->
   <Menubar.Menu>
     <Menubar.Trigger><WeatherStation></WeatherStation>错误</Menubar.Trigger>
     <Menubar.Content>
@@ -58,7 +58,7 @@
       <Menubar.Separator />
     </Menubar.Content>
   </Menubar.Menu>
-  <Menubar.Menu>
+  <!-- <Menubar.Menu>
     <Menubar.Trigger><Analytics></Analytics>性能</Menubar.Trigger>
     <Menubar.Content>
       <Menubar.Item on:click={() => navigatorPage("/test")}
@@ -69,13 +69,13 @@
         >接口性能</Menubar.Item
       >
     </Menubar.Content>
-  </Menubar.Menu>
-  <Menubar.Menu>
+  </Menubar.Menu> -->
+  <!-- <Menubar.Menu>
     <Menubar.Trigger><PromptSession></PromptSession>配置</Menubar.Trigger>
     <Menubar.Content>
       <Menubar.Item on:click={() => navigatorPage("/test")}
         >警报配置</Menubar.Item
       >
     </Menubar.Content>
-  </Menubar.Menu>
+  </Menubar.Menu> -->
 </Menubar.Root>

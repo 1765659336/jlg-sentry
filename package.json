@@ -31,9 +31,11 @@
         "vite": "^5.2.0"
     },
     "dependencies": {
+        "axios": "^1.7.2",
         "bits-ui": "^0.21.10",
         "cmdk-sv": "^0.0.17",
         "echarts": "^5.5.0",
+        "lottie-web": "^5.12.2",
         "mode-watcher": "^0.3.0",
         "svelte-radix": "^1.1.0"
     },
