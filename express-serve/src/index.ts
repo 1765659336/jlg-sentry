@@ -10,7 +10,6 @@ import jwtConfig from './config/jwt';
 import requestLog from './config/requestLog';
 import bodyParams from './config/bodyParams';
 import dotenvInit from './config/dotenv';
-import socketInit from './socket/index';
 
 dotenvInit();
 
@@ -56,12 +55,9 @@ const port = Number(process.env.SERVER_PORT) ?? 3000;
 
 const { jwtKey } = jwtConfig({ app });
 
-
-routers({ app, jwtKey, redisClient });
-
-const server = socketInit({ app, jwtKey, redisClient });
+routers({ app, jwtKey });
 
 // 启动服务器
-server.listen(port, function () {
+app.listen(port, function () {
 	console.log(`Server running at ${process.env.SERVER_URL}/`);
 });
