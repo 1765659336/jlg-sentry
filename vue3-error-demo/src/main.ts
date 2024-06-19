@@ -24,7 +24,7 @@ const addMapFileUrl = (fileUrl: string) => {
 	return splitArr.join('/');
 };
 
-sdk({
+const returnOption = sdk({
     xhrCallback: (xhr) => {
         console.log(xhr);
     },
@@ -50,6 +50,7 @@ sdk({
         vue: app,
         vueErrorCallback: (err: any,vm: any, info: any) => {
             console.log(err);
+            console.log(returnOption,'returnOption');
         }
     }
 });
