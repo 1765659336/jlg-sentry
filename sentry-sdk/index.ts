@@ -4,7 +4,7 @@ import fetchReplace, { T_FetchCallbackParams } from './pac/fetch_replace';
 import windowError from './pac/window_error';
 import unHandledRejection from './pac/un_handled_rejection';
 import vueError from './pac/vue_error';
-import rrwebInit, { rrwebEvents } from './col/rrweb'
+import rrwebInit, { rrwebEvents } from './col/rrweb';
 
 export default (option: {
 	// httpXhr请求错误回调
@@ -20,18 +20,18 @@ export default (option: {
 	// Vue错误收集
 	vueErrorOption?: {
 		vue: any; // Vue实例
-		vueErrorCallback: (err:Error) => void;
+		vueErrorCallback: (err: Error) => void;
 	};
 	isOpenRrweb?: boolean; // 是否开启rrweb
 }) => {
 	const eventBus = new EventEmitter();
 	const { xhrCallback, fetchCallback, jsCallback, sourceCallback, unHandledRejectionCallback, vueErrorOption, isOpenRrweb } = option;
 
-	const returnOption:{
-		rrwebEvents:any[]
+	const returnOption: {
+		rrwebEvents: any[];
 	} = {
-		rrwebEvents:[]
-	}
+		rrwebEvents: [],
+	};
 
 	if (xhrCallback) {
 		eventBus.on('xhrCallback', (xhr: T_SDKDataXMLHttpRequest) => {
@@ -76,10 +76,9 @@ export default (option: {
 		});
 	}
 
-	if(isOpenRrweb){
+	if (isOpenRrweb) {
 		rrwebInit();
 		returnOption.rrwebEvents = rrwebEvents;
-
 	}
 	return returnOption;
 };

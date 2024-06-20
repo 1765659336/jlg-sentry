@@ -10,11 +10,11 @@ export default () => {
 			if (isCheckout) {
 				rrwebEvents.length = 0;
 			}
-			rrwebEvents.push(event);	
+			rrwebEvents.push(event);
 		},
 		packFn: rrweb.pack,
 		recordCanvas: true, // 记录 canvas 内容
 		checkoutEveryNms: 10 * 1000, // 每10s重新制作快照
 		checkoutEveryNth: 200, // 每 200 个 event 重新制作快照
 	});
-}
+};
