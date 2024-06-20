@@ -1,4 +1,3 @@
-import { events } from '../col/rrweb';
 import EventEmitter from '../utils/handleEvents';
 
 export default (eventBus: EventEmitter) => {
@@ -8,7 +7,7 @@ export default (eventBus: EventEmitter) => {
 			if (err.target instanceof Element && 'localName' in err.target) {
 				eventBus.emit('sourceCallback', err);
 			} else {
-				eventBus.emit('jsCallback', { err: err, events: events });
+				eventBus.emit('jsCallback', { err: err });
 			}
 		},
 		true

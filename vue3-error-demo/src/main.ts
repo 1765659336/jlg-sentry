@@ -48,11 +48,12 @@ const returnOption = sdk({
     },
     vueErrorOption: {
         vue: app,
-        vueErrorCallback: (err: any,vm: any, info: any) => {
+        vueErrorCallback: (err: any) => {
             console.log(err);
             console.log(returnOption,'returnOption');
         }
-    }
+    },
+    isOpenRrweb: true,
 });
 
 app.use(ElementPlus).mount('#app')

@@ -21,6 +21,30 @@
 
   ​	把错误发生前一段时间（时间可自定义）的用户的操作录制下来，然后通过回放来还原错误
 
+```ts
+import * as rrweb from 'rrweb';
+
+// events存储录屏信息
+export const rrwebEvents: any[] = [];
+// record 用于记录DOM中的所有变更
+export default () => {
+	rrweb.record({
+		emit(event, isCheckout) {
+			// isCheckout 是一个标识，告诉你重新制作了快照
+			if (isCheckout) {
+				rrwebEvents.length = 0;
+			}
+			rrwebEvents.push(event);	
+		},
+		packFn: rrweb.pack,
+		recordCanvas: true, // 记录 canvas 内容
+		checkoutEveryNms: 10 * 1000, // 每10s重新制作快照
+		checkoutEveryNth: 200, // 每 200 个 event 重新制作快照
+	});
+}
+
+```
+
 - 记录用户行为
 
   ​	通过前两种方式可以解决大部分问题，假如用户做了很多操作，操作的间隔超过了单次录屏时长，录制的视频可能是不完整的，此时可以借助用户行为来分析用户的操作（比如用户切换页面、鼠标行为、键盘敲击），帮助复现问题
